@@ -1,7 +1,7 @@
 # Binary Volume Ray Tracer
 ### Dependencies
 1. [Optional] Install OpenMP library to enable parallel computation. <br>
-2. [Optional] Install SDL2 library to view rendered image in a window and be able to enable interactive mode. <br>
+2. [Optional] Install SDL2 library to view rendered image in a window and be able to use interactive mode (with low resolution). <br>
 
 ### Results
 ![Alt capsules](render.png) <br>
