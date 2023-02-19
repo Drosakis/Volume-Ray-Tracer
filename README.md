@@ -5,4 +5,4 @@
 
 ### Results
 ![Alt capsules](render.png) <br>
-You can view the .ppm files with a ppm viewer such as [this](https://www.cs.rhodes.edu/welshc/COMP141_F16/ppmReader.html).
+You can view the resulting render with a ppm viewer such as [this](https://www.cs.rhodes.edu/welshc/COMP141_F16/ppmReader.html).
