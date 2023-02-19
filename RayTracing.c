@@ -78,7 +78,7 @@ struct Material
 {
 	Vector3 color;
 	double emittance;
-	double reflectance; // Lambertian BRDF r/pi
+	double reflectance;
 	double kd;
 	double ks;
 	double shininess;
