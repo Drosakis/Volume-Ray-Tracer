@@ -963,6 +963,7 @@ int main(int argv, char** args)
 
 		if (keyboard[SDL_SCANCODE_ESCAPE])
 			CloseWindowAndQuit(sdlWindow);
+			return 0;
 		if (keyboard[SDL_SCANCODE_1])
 			type = Depth;
 		if (keyboard[SDL_SCANCODE_2])
