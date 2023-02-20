@@ -89,9 +89,7 @@ enum RenderType
 {
 	Depth = 0,
 	RayCasting = 1,
-	RayTracing = 2,
-	PathTracing = 3,
-	Radiosity = 4
+	RayTracing = 2
 };
 typedef enum RenderType RenderType;
 char RenderTypeToString[][20] = { "Depth", "RayCasting", "RayTracing"};
