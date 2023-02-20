@@ -94,7 +94,7 @@ enum RenderType
 	Radiosity = 4
 };
 typedef enum RenderType RenderType;
-char RenderTypeToString[][20] = { "Depth", "RayCasting", "RayTracing", "PathTracing", "Radiosity" };
+char RenderTypeToString[][20] = { "Depth", "RayCasting", "RayTracing"};
 
 Vector2 NewVector2(int x, int y)
 {
