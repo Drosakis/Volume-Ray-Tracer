@@ -92,7 +92,7 @@ enum RenderType
 	RayTracing = 2
 };
 typedef enum RenderType RenderType;
-char RenderTypeToString[][20] = { "Depth", "RayCasting", "RayTracing"};
+char RenderTypeToString[][20] = { "Depth", "RayCasting", "RayTracing" };
 
 Vector2 NewVector2(int x, int y)
 {
@@ -358,6 +358,14 @@ double Vector3MaxElement(Vector3 v)
 		return v.y;
 	else //if (v.z >= v.x && v.z >= v.y)
 		return v.z;
+}
+
+Vector3 OrientationToDirectionVector(Vector3 orientation)
+{
+	Vector3 forward = NewVector3(0, 0, 1);
+	Vector3 direction = rotate(forward, orientation);
+	direction = normalize(direction);
+	return direction;
 }
 
 byte*** voxelGrid; // 1 cubic meter voxel grid
@@ -832,7 +840,7 @@ void Render(RenderType type)
 		j = k % (int)camera->resolution.y;
 		imagePoint = camera->imagePoints[i][j];
 
-		// Initialize ray from camera pos and image point and compute pixel value
+		// Initialize ray from camera position and image point and compute pixel value
 		ray.o = imagePoint;
 		ray.w = normalize(sub(imagePoint, camera->position));
 		if (type == Depth)
@@ -855,14 +863,6 @@ void SaveImageToFile(uint32_t* pixels, Vector2 res, char* filename)
 	for (k = 0; k < pixelCount; k++)
 		fprintf(file, "%d %d %d\n", ((byte*)pixels)[k*4 + 2], ((byte*)pixels)[k*4 + 1], ((byte*)pixels)[k*4 + 0]);
 	fclose(file);
-}
-
-Vector3 OrientationToDirectionVector(Vector3 orientation)
-{
-	Vector3 forward = NewVector3(0, 0, 1);
-	Vector3 direction = rotate(forward, orientation);
-	direction = normalize(direction);
-	return direction;
 }
 
 #ifdef USE_SDL
