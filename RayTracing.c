@@ -960,8 +960,10 @@ int main(int argv, char** args)
 		mouseButtons = SDL_GetRelativeMouseState(&mouseDeltaX, &mouseDeltaY);
 
 		if (keyboard[SDL_SCANCODE_ESCAPE])
+		{
 			CloseWindowAndQuit(sdlWindow);
 			return 0;
+		}
 		if (keyboard[SDL_SCANCODE_1])
 			type = Depth;
 		if (keyboard[SDL_SCANCODE_2])
